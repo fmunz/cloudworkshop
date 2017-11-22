@@ -22,7 +22,7 @@ Provisioning the service will take about 20 minutes.
 
 ## Access your DB instance
 
-
+Do this lab if you have an SQL client installed already or if you can install SQLcl which requires Java.
 Basically there are several options to achieve this. We will use the easier one in this lab.
 
 ### SQLcl and Create SSL
