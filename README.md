@@ -26,5 +26,6 @@ Write down the following facts (check the workshops slides how to get to the det
 * Every other password for database of JCS that you configure, please write it down.
 
 # Labs
-[Oracle Cloud Labs](oracloudlabs01.md)
+[Oracle Cloud Labs](oracloudlabs01.md)  
+
 [AWS Labs](awslabs01.md)
