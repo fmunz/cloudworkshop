@@ -27,7 +27,7 @@ Access to to Java EE module to deploy as well as the detailed steps to complete 
 
 ## DB as Service in Oracle Cloud
 
-Provision the database as described in [create DB as a Service](https://github.com/oracle/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md).
+Provision the database as described in [create DB as a Service](https://github.com/oracle/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md). Unike in the description, please use the key that you just created.
 
 Note that there are some small changes in the UI compared to the instructions. The cloud is very dynamic and Oracle keeps improving it sometimes :-)
 
@@ -72,18 +72,16 @@ SQL> GRANT CREATE SESSION TO test;
 Grant succeeded.
 ```
 
-
-
 ### SQL Client? 
 
 Do this lab if you need an SQL client installed locally already. Alternatively install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) which requires Java JRE 8 installed.
 
-### Open DB Port Listen Port (Poor man Solution)
+## Option 1: Open DB Port Listen Port (Poor man solution and risky)
 
-An option is to open port 1521 to your DB as a service (which is discouraged for security reasons, but possibly okay to try it out?). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener (1521). 
+An option is to open port 1521 to your DB as a service (which is discouraged for security reasons, but possibly okay to try it out once?). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener (1521). 
 
 ### Connect to DB via Port 1521
-Once you created the test user disconnect. From a terminal on your local machine connect using the following command. Get the connect string from the Oracle cloud console:
+From a terminal on your *local machine* connect using the following command. Get the connect string from the Oracle cloud console:
 
 ```
 
@@ -92,9 +90,7 @@ $ ./sql test/test@//111.222.333.444:1521/CONNECT_STRING
 $ select 42 from dual;
 ```
 
-
-### Connect using an SSH tunnel
-
+## Option 2: Connect using an SSH tunnel
 
 The better option is [using an SSL Tunnel](http://barrymcgillin.blogspot.de/2015/05/sqlcl-cloud-connections-via-secure.html).
 
