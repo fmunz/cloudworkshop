@@ -46,7 +46,7 @@ You are free to do this lab however you like. Another option that we don't follo
 
 ### Open DB Port Listen Port (Poor man Solution)
 
-Yet another option is to open port 1521 to your DB as a service (which is discouraged.) 
+Yet another option is to open port 1521 to your DB as a service (which is discouraged). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener. 
 
 
 
