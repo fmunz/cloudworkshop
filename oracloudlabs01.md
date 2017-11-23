@@ -1,4 +1,4 @@
-# Lab O1: Oracle DB as a Service
+# Lab 0: Prerequisites for Oracle Cloud Labs
 
 ## Create a Private / Public Keys
 
@@ -8,15 +8,28 @@ To create the keys [for Unix follow these instructions](https://docs.oracle.com/
 
 ## Set Replication Policy
 
-We will do this lab together. Without setting the replication policy you will have issues with Oracle PaaS services later. Always set this for a new idendity domain.
+We will do this lab together. Without setting the replication policy you will have issues with Oracle PaaS services later. Always set this for a new idendity domain. To successfully work with the PaaS services it is less important how you set it, just that you set. (For legal and compliance reasons this is obviously different).
 
 If you are working on your own, the details are described in my [blog post about geo replication](http://www.munzandmore.com/2017/ora/oracle-storage-geo-replication)
 
+
+# Lab O1: Oracle ACCS
+
+ACCS is short for application container cloud service. In this lab we will deploy a Java EE application to ACCS. Note, that you could also package a go, Spring Boot or Python application. ACCS provides the language runtime only and is therefore very flexible.
+
+We will try one of the newest features, the deployment of a Java EE module. The steps to complete this lab are described here:
+
+[ACCS with Java EE](https://github.com/oracle/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md).
+
+
+# Lab O2: Oracle DB as a Service
+
+
 ## DB as Service in Oracle Cloud
 
-Provision the database as described in [this lab](https://github.com/oracle/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md).
+Provision the database as described in [create DB as a Service](https://github.com/oracle/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md).
 
-Note that there are some small changes in the UI compared to the instructions. The cloud is very dynamic and Oracle keeps improving it sometimes.
+Note that there are some small changes in the UI compared to the instructions. The cloud is very dynamic and Oracle keeps improving it sometimes :-)
 
 Provisioning the service will take about 20 minutes.
 
@@ -36,12 +49,4 @@ You are free to do this lab however you like. Another option that we don't follo
 Yet another option is to open port 1521 to your DB as a service which is strongly discouraged. However then no SSL tunnel is needed.
 
 
-
-# Lab O2: Oracle ACCS
-
-ACCS is short for application container cloud service. In this lab we will deploy a Java EE application to ACCS. Note, that you could also package a go, Spring Boot or Python application. ACCS provides the language runtime only and is therefore very flexible.
-
-The steps for this lab are described here:
-
-[Oracle DB as a Service](https://github.com/oracle/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md).
 
