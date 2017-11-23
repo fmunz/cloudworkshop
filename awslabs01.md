@@ -1,7 +1,7 @@
 
 ## Lab A1: Create an EC2 Instance
 
-In this lab we create a EC2 instance that will give you a Linux server in the cloud with full internet access and a web server running.
+In this lab we create a EC2 instance that will give you a Linux server in the cloud with full internet access and sudo privilegs. While we provision the EC2 instance, we also install a web server running.
 
 
 ### Create EC2 with httpd already provisioned
