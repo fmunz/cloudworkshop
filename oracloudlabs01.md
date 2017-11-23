@@ -33,20 +33,69 @@ Note that there are some small changes in the UI compared to the instructions. T
 
 Provisioning the service will take about 20 minutes.
 
-## (Optional) Access your DB instance
+## Access your DB instance
 
-Do this lab if you have an SQL client installed already or if you can install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html).
-Basically there are several options to achieve this. 
+### Connect to the instance with ss
 
-### SQLcl and Create SSL
+From a command prompt in Linux (or Putty on Windows) you can connect to the compute instance that is running the DB. This is a unique feature for the Oracle cloud and not possible for AWS.
 
-The best option is [using an SSL Tunnel](http://barrymcgillin.blogspot.de/2015/05/sqlcl-cloud-connections-via-secure.html).
+In shell, run the following command:
 
-You are free to do this lab however you like. Another option that we don't follow in this lab is to use your [local SQL Developer](https://getpocket.com/a/read/1795373431), if you manage to do it. 
+```
+ssh -i YOUR_PRIV_keyfile oracle@PUBLIC_IP
+```
+
+Note, there is an oracle user, that you use to run sqlplus etc. and a opc user that also allows sudo access etc.
+So run the following command to create a test user for the DB service (the whole block below is taken from Tim Hall's [oraclebase blog](https://oracle-base.com/articles/vm/oracle-cloud-database-as-a-service-dbaas-create-service#network) - I had no idea about the setting the session for the PDB1 container):
+
+```
+[oracle@obtest1 ~]$ sqlplus / as sysdba
+
+SQL*Plus: Release 12.2.0.1.0 Production on Tue Nov 8 09:44:42 2016
+
+Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production
+
+SQL> ALTER SESSION SET CONTAINER = pdb1;
+
+Session altered.
+
+SQL> CREATE USER test IDENTIFIED BY test;
+
+User created.
+
+SQL> GRANT CREATE SESSION TO test;
+
+Grant succeeded.
+```
+
+
+
+### SQL Client? 
+
+Do this lab if you need an SQL client installed locally already. Alternatively install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) which requires Java JRE 8 installed.
 
 ### Open DB Port Listen Port (Poor man Solution)
 
-Yet another option is to open port 1521 to your DB as a service (which is discouraged). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener. 
+An option is to open port 1521 to your DB as a service (which is discouraged for security reasons, but possibly okay to try it out?). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener (1521). 
+
+### Connect to DB via Port 1521
+Once you created the test user disconnect. From a terminal on your local machine connect using the following command. Get the connect string from the Oracle cloud console:
+
+```
+
+$ ./sql test/test@//111.222.333.444:1521/CONNECT_STRING
+
+$ select 42 from dual;
+```
 
 
+### Connect using an SSH tunnel
 
+
+The better option is [using an SSL Tunnel](http://barrymcgillin.blogspot.de/2015/05/sqlcl-cloud-connections-via-secure.html).
+
+You are free to do this lab however you like. Or another option that we don't follow in this lab is to use your [local SQL Developer](https://getpocket.com/a/read/1795373431).
