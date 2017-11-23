@@ -17,7 +17,7 @@ If you are working on your own, the details are described in my [blog post about
 
 ACCS is short for application container cloud service. In this lab we will deploy a Java EE application to ACCS. Note, that you could also package a go, Spring Boot or Python application. ACCS provides the language runtime only and is therefore very flexible.
 
-We will try one of the newest features, the deployment of a Java EE module. The steps to complete this lab are described here:
+Access to to Java EE module to deploy as well as the detailed steps to complete this lab are described here:
 
 [ACCS with Java EE](https://github.com/oracle/weblogic-innovation-seminars/blob/caf-12.2.1/cloud.demos/jcs.basics/create.dbcs.ui.md).
 
@@ -33,10 +33,10 @@ Note that there are some small changes in the UI compared to the instructions. T
 
 Provisioning the service will take about 20 minutes.
 
-## Access your DB instance
+## (Optional) Access your DB instance
 
-Do this lab if you have an SQL client installed already or if you can install SQLcl which requires Java.
-Basically there are several options to achieve this. We will use the easier one in this lab.
+Do this lab if you have an SQL client installed already or if you can install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html).
+Basically there are several options to achieve this. 
 
 ### SQLcl and Create SSL
 
@@ -46,7 +46,7 @@ You are free to do this lab however you like. Another option that we don't follo
 
 ### Open DB Port Listen Port (Poor man Solution)
 
-Yet another option is to open port 1521 to your DB as a service which is strongly discouraged. However then no SSL tunnel is needed.
+Yet another option is to open port 1521 to your DB as a service (which is discouraged.) 
 
 
 
