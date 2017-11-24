@@ -2,13 +2,13 @@
 
 ## Create a Private / Public Keys
 
-To configure cloud services and to access them later you have to create a private / public key pair.
+To configure cloud services and to access them later you have to create a public / private key pair.
 
 To create the keys [for Unix follow these instructions](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/generate-ssh-key-pair.html#GUID-2BD5B767-0659-4791-A170-279F469B2CC3), for Windows [follow the instructions here](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/create-ssh-tunnel.html#GUID-6929CE39-6CD7-46C9-8022-929A9844B1C5).
 
 ## Set Replication Policy
 
-We will do this lab together. Without setting the replication policy you will have issues with Oracle PaaS services later. Always set this for a new idendity domain. To successfully work with the PaaS services it is less important how you set it, just that you set. (For legal and compliance reasons this is obviously different).
+We will do this lab together. Without setting the replication policy you will have issues with Oracle PaaS services later. Always set this first for a new idendity domain. Actually, to successfully work with the PaaS services it is less important how you set it, just that you set. (For legal and compliance reasons this is obviously different).
 
 If you are working on your own, the details are described in my [blog post about geo replication](http://www.munzandmore.com/2017/ora/oracle-storage-geo-replication)
 
@@ -37,9 +37,9 @@ Provisioning the service will take about 20 minutes.
 
 ### Connect to the instance with ss
 
-From a command prompt in Linux (or Putty on Windows) you can connect to the compute instance that is running the DB. This is a unique feature for the Oracle cloud and not possible for AWS.
+From a command prompt in Linux (or Putty on Windows) you can connect to the compute instance that is running the DB. This is a unique feature for the Oracle cloud and not possible for AWS (where you only the DB as a service, but no access to a VM).
 
-In shell, run the following command:
+In a shell, run the following command to your DB instance:
 
 ```
 ssh -i YOUR_PRIV_keyfile oracle@PUBLIC_IP
