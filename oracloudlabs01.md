@@ -4,11 +4,11 @@
 
 To configure cloud services and to access them later you have to create a public / private key pair.
 
-To create the keys [for Unix follow these instructions](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/generate-ssh-key-pair.html#GUID-2BD5B767-0659-4791-A170-279F469B2CC3), for Windows [follow the instructions here](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/create-ssh-tunnel.html#GUID-6929CE39-6CD7-46C9-8022-929A9844B1C5).
+To create such keys [for Unix follow these instructions](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/generate-ssh-key-pair.html#GUID-2BD5B767-0659-4791-A170-279F469B2CC3), for Windows [follow the instructions here](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/create-ssh-tunnel.html#GUID-6929CE39-6CD7-46C9-8022-929A9844B1C5).
 
 ## Set Replication Policy
 
-We will do this lab together. Without setting the replication policy you will have issues with Oracle PaaS services later. Always set this first for a new idendity domain. Actually, to successfully work with the PaaS services it is less important how you set it, just that you set. (For legal and compliance reasons this is obviously different).
+During the workshop, we will do this lab together. Without setting the replication policy you will have issues with Oracle PaaS services later. Always set this first for a new idendity domain. Actually, to successfully work with the PaaS services it is less important how you set it, just that you set. (For legal and compliance reasons this is obviously different).
 
 If you are working on your own, the details are described in my [blog post about geo replication](http://www.munzandmore.com/2017/ora/oracle-storage-geo-replication)
 
@@ -74,11 +74,11 @@ Grant succeeded.
 
 ### SQL Client? 
 
-Do this lab if you need an SQL client installed locally already. Alternatively install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) which requires Java JRE 8 installed.
+For this lab, you have to have an SQL client installed locally. You can install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) which requires Java JRE 8 installed.
 
 ## Option 1: Open DB Port Listen Port (Poor man solution and risky)
 
-An option is to open port 1521 to your DB as a service (which is discouraged for security reasons, but possibly okay to try it out once?). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener (1521). 
+An option is to open port 1521 to your DB as a service (which is discouraged for security reasons, since you open it to the world!). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener (1521). 
 
 ### Connect to DB via Port 1521
 From a terminal on your *local machine* connect using the following command. Get the connect string from the Oracle cloud console:
@@ -94,4 +94,4 @@ $ select 42 from dual;
 
 The better option is [using an SSL Tunnel](http://barrymcgillin.blogspot.de/2015/05/sqlcl-cloud-connections-via-secure.html).
 
-You are free to do this lab however you like. Or another option that we don't follow in this lab is to use your [local SQL Developer](https://getpocket.com/a/read/1795373431).
+You are free to do this lab however you like. Or another option, that we don't follow in this lab is to use your [local SQL Developer](https://getpocket.com/a/read/1795373431).
