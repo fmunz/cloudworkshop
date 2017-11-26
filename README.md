@@ -15,7 +15,7 @@ Congratulations! You made it to the the multi cloud tutorial for DOAG 2017. We w
 All labs are without any kind of support. Please make sure that you do not exceed the free tier. Follow the principles that I was talking about during the workshop
 
 ## Trial Accounts
-These instructions assume that you already have a free trial account for Oracle and Amazon cloud.
+These instructions assume that you already have a free [trial account for Oracle](http://www.munzandmore.com/2016/ora/login-problems-oracle-cloud-tips) and Amazon cloud.
 In case of problems with these accounts contact to the cloud vendors directly.
 
 ## Write down the facts!
