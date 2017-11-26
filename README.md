@@ -2,7 +2,7 @@
 # Cloud Lab DOAG 2017 
 
 
-Estimated Duration 2h. 
+Estimated Duration 2h.  
 [Contact me](http://www.munzandmore.com/about) if you want this workshop (or a much more extensive one) delivered at your company.
 
 
