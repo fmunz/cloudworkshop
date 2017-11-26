@@ -1,5 +1,5 @@
 
-# Cloud Lab DOAG 2017 
+# Mulit-Cloud Labs DOAG 2017 (AWS, Oracle)
 
 
 Estimated Duration 2h.  
