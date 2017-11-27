@@ -65,3 +65,6 @@ High level steps are:
 * Write down the URL
 * Check if you can access your web site.
 
+# Shutdown Ressources
+
+Make sure to shut down your EC2 or DB instances once you finished with the AWS labs.
