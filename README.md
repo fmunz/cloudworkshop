@@ -31,7 +31,7 @@ Write down the following facts (check the workshops slides how to get these deta
 
 # Additional Cloud Ressources (For the curious ones)
 
-* [Public Cloud Benefits You Should Know](http://www.munzandmore.com/2015/ora/12-public-cloud-benefits-and-features-you-should-know)
+* [12 Public Cloud Benefits You Should Know](http://www.munzandmore.com/2015/ora/12-public-cloud-benefits-and-features-you-should-know)
 * [Your Data Center's Degree of Cloud](http://www.munzandmore.com/2015/ora/data-center-or-cloud)
 * [Serverless Computing](https://speakerdeck.com/fmunz/serverless-architectures-devoxx-2017-presentations-includes-aws-lambda-fn-project)
 * [Microservices Runtimes](https://speakerdeck.com/fmunz/microservices-runtimes)
