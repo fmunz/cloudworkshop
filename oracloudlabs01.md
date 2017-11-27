@@ -1,5 +1,9 @@
 # Lab 0: Prerequisites for Oracle Cloud Labs
 
+## Login
+
+Login to https://cloud.oracle.com. Select "Traditional Cloud", your DC, your ID Domain, username and password (you [wrote that down](https://github.com/fmunz/cloudworkshop)). 
+
 ## Create a Private / Public Keys
 
 To configure cloud services and to access them later you have to create a public / private key pair.
@@ -10,12 +14,12 @@ To create such keys [for Unix follow these instructions](https://docs.oracle.com
 
 During the workshop, we will do this lab together. Without setting the replication policy you will have issues with Oracle PaaS services later. Always set this first for a new idendity domain. Actually, to successfully work with the PaaS services it is less important how you set it, just that you set. (For legal and compliance reasons this is obviously different).
 
-If you are working on your own, the details are described in my [blog post about geo replication](http://www.munzandmore.com/2017/ora/oracle-storage-geo-replication)
+If you are working on your own, you may want to check the details described in my [blog post about geo replication](http://www.munzandmore.com/2017/ora/oracle-storage-geo-replication)
 
 
 # Lab O1: Oracle ACCS
 
-ACCS is short for application container cloud service. In this lab we will deploy a Java EE application to ACCS. Note, that you could also package a go, Spring Boot or Python application. ACCS provides the language runtime only and is therefore very flexible.
+This is the easiest lab to get started. ACCS is short for application container cloud service. In this lab we will deploy a Java EE application to ACCS. Note, that you could also package a go, Spring Boot or Python application. ACCS provides the language runtime only and is therefore very flexible.
 
 Access to to Java EE module to deploy as well as the detailed steps to complete this lab are described here:
 
@@ -35,7 +39,11 @@ Provisioning the service will take about 20 minutes.
 
 ## Access your DB instance
 
-### Connect to the instance with ss
+### SQLcl 
+
+For this lab, you have to have an SQL client installed locally. You can install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) which requires Java JRE 8 installed.
+
+### Connect to the instance with ssh
 
 From a command prompt in Linux (or Putty on Windows) you can connect to the compute instance that is running the DB. This is a unique feature for the Oracle cloud and not possible for AWS (where you only the DB as a service, but no access to a VM).
 
@@ -72,16 +80,12 @@ SQL> GRANT CREATE SESSION TO test;
 Grant succeeded.
 ```
 
-### SQL Client? 
+## Option 1: Open DB Port Listen Port (RISKY in PROD: Poor man solution)
 
-For this lab, you have to have an SQL client installed locally. You can install [SQLcl from this location](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) which requires Java JRE 8 installed.
-
-## Option 1: Open DB Port Listen Port (Poor man solution and risky)
-
-An option is to open port 1521 to your DB as a service (which is discouraged for security reasons, since you open it to the world!). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener (1521). 
+An option is to open port 1521 to your DB as a service (which is discouraged for security reasons, since you open one of the most well-known ports to the world!). To do so go the DB service and click on the hamburger icon, go to access rules and open the port for the listener (1521). 
 
 ### Connect to DB via Port 1521
-From a terminal on your *local machine* connect using the following command. Get the connect string from the Oracle cloud console:
+From a terminal on your *local machine* connect using SQLcl and the following command. Note, you can get your connect string from the Oracle cloud console for your DB instance.
 
 ```
 
