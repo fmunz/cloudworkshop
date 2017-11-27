@@ -25,11 +25,18 @@ Write down the following facts (check the workshops slides how to get these deta
 * Oracle Cloud account username:
 * Oracle Cloud account password:
 * Make sure you do not loose the first temp pwd
-* Oracle Cloud identity domain: (needed if you later switch to OCI)
+* Oracle Cloud identity domain: (needed, if you later switch from classic to OCI/Bare Metal)
 * Data center/region:
 * Every other password for database or other PaaS that you configure, please write it down.
 
-# Labs
+# Additional Cloud Ressources (For the curious ones)
+
+* [Public Cloud Benefits You Should Know](http://www.munzandmore.com/2015/ora/12-public-cloud-benefits-and-features-you-should-know)
+* [Your Data Center's Degree of Cloud](http://www.munzandmore.com/2015/ora/data-center-or-cloud)
+* [Serverless Computing](https://speakerdeck.com/fmunz/serverless-architectures-devoxx-2017-presentations-includes-aws-lambda-fn-project)
+* [Microservices Runtimes](https://speakerdeck.com/fmunz/microservices-runtimes)
+
+# Hands-on Labs
 [Oracle Cloud Labs](oracloudlabs01.md)  
 
 [AWS Labs](awslabs01.md)
