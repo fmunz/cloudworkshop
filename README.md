@@ -1,5 +1,5 @@
 
-# Mulit-Cloud Labs DOAG 2017 (AWS, Oracle)
+# Multi-Cloud Workshop with Hands-on Labs DOAG 2017 (AWS, Oracle)
 
 
 Estimated Duration 2h.  
