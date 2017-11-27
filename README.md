@@ -20,12 +20,12 @@ In case of problems with these accounts contact to the cloud vendors directly.
 
 ## Write down the facts!
 
-Write down the following facts (check the workshops slides how to get to the detail)
+Write down the following facts (check the workshops slides how to get these details, e.g. from the "Welcome Email")
 
 * Oracle Cloud account username:
 * Oracle Cloud account password:
 * Make sure you do not loose the first temp pwd
-* Oracle Cloud identity domain:
+* Oracle Cloud identity domain: (needed if you later switch to OCI)
 * Data center/region:
 * Every other password for database or other PaaS that you configure, please write it down.
 
